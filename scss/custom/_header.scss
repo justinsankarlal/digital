@@ -1,0 +1,8 @@
+$rem : 16;
+
+header{
+    outline:1px solid red;
+    height:52px;
+    width: 84/$rem+rem;
+    margin-right:30/$rem+rem;
+}

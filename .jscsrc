@@ -58,6 +58,5 @@
     ],
     "safeContextKeyword": "_this",
     "validateLineBreaks": "CRLF",
-    "validateQuoteMarks": "'",
-    "validateIndentation": "\t"
+    "validateQuoteMarks": "'"
 }

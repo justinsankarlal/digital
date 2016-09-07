@@ -5,6 +5,16 @@
 */
 
 module.exports = function(grunt){
+    var scriptPath = 'js/';
+    var customScript = [
+        scriptPath+'script.js'
+    ];
+    
+    var libJs = [
+        scriptPath+'lib/jquery.js',
+        scriptPath+'lib/bootstrap.js'
+    ];
+    
 	grunt.initConfig({
 		uglify: {
 			dist: {
@@ -16,10 +26,7 @@ module.exports = function(grunt){
 		concat : {
 			dist : {
 				files: {
-					'build/js/multibrand.js': [
-						'js/lib/*.js',
-						'js/*.js'
-					]
+					'build/js/multibrand.js': [ libJs, customScript ]
 				}
 			}
 		},
@@ -70,7 +77,6 @@ module.exports = function(grunt){
 		'sass:dev'
 	]);
     
-    grunt.registerTask('watch', 'dev'); 
 	
 	grunt.registerTask('prod', [
 		'concat',
